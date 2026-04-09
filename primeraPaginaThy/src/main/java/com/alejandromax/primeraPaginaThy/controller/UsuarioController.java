@@ -1,4 +1,4 @@
-package com.alejandromax.primeraPractica.controller;
+package com.alejandromax.primeraPaginaThy.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,13 +11,13 @@ import java.util.List;
 public class UsuarioController {
 
     @GetMapping("/usuario")
-    public String mostrarPerfil(Model model) {
+    public String mostrarUsuario(Model model) {
 
         model.addAttribute("Nombre", "Juan");
-        model.addAttribute("Edad", 20);
+        model.addAttribute("Edad", 18);
 
-        List<String> habilidades = Arrays.asList("Java", "Spring Boot", "HTML");
-        model.addAttribute("Habilidades", habilidades);
+        List<String> lista = Arrays.asList("Java", "MySQL", "SpringBoot", "HTML", "CSS", "JS");
+        model.addAttribute("Habilidades", lista);
 
         return "usuario";
     }

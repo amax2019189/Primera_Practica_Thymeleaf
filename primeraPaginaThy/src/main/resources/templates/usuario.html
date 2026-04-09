@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -142,12 +142,11 @@
 </head>
 <body>
 
-<div class="contenedor">
-    <div class="tarjeta">
-        <h1 class="titulo">Datos del Usuario</h1>
-        <p class="subtitulo">Información del usuario mostrado desde thymeleaf</p>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <h1 class="titulo">Datos Personales</h1>
+            <p class="subtitulo">Información de mi persona utilizando Thymeleaf</p>
 
-        <div class="datos">
             <div class="dato">
                 <span class="etiqueta">Nombre</span>
                 <span class="valor" th:text="${Nombre}"></span>
@@ -164,13 +163,11 @@
                 <ul class="lista">
                     <li th:each="hab : ${Habilidades}" th:text="${hab}"></li>
                 </ul>
-
             </div>
 
             <a class="boton" th:href="@{/datos}">Ir a Datos</a>
         </div>
     </div>
-</div>
 
 </body>
 </html>

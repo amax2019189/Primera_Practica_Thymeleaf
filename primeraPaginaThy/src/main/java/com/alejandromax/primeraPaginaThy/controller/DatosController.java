@@ -1,4 +1,4 @@
-package com.alejandromax.primeraPractica.controller;
+package com.alejandromax.primeraPaginaThy.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,8 +9,8 @@ public class DatosController {
 
     @GetMapping("/datos")
     public String mostrarDatos(Model model) {
-        model.addAttribute("Nombre", "Alejandro Benjamin");
-        model.addAttribute("Apellido", "Max Lopez");
+
+        model.addAttribute("Nombre", "Alejandro Max");
         model.addAttribute("Edad", 21);
 
         return "datos";
